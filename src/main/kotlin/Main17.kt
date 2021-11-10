@@ -1,8 +1,10 @@
+import kotlin.math.sin
+
 fun main(args: Array<String>) {
     val range = 24
     for (x in 0..range) {
         for (y in 0..range) {
-            if (Math.sin(x.toDouble() / 3) <= y / 8 - 2)
+            if (y > 8 * sin(2.6 * Math.PI / range * x) + range - 1 - 8)
                 print("# ")
             else
                 print(". ")
